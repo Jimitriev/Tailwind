@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+}
+
+input {
+    @apply outline-none;
+}
+
+ul, li {
+    @apply m-0 p-0;
+}
+
+.container {
+    @media only screen and (max-width: 1440px) {
+        @apply max-w-[80%] mx-auto;
+    }
+
+    @media only screen and (max-width: 1720px) {
+        @apply mx-auto w-[80%] max-w-[1440px];
+    }
+}
