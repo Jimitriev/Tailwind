@@ -4,10 +4,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    screens: {
-      xl: '1440px'
-    }, 
+    
     extend: {
+      screens: {
+        xl: '1440px'
+      }, 
       colors: {
         primary: '#6C5DD3', 
         secondary: '#0E0932', 

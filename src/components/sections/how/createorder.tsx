@@ -22,13 +22,13 @@ import swap from "../../../assets/images/swap.png";
 
     return(
         <div className="container">
-            <div className='w-full border-b-2 border-dark-200 flex justify-between py-10'>
-                <div className='w-1/2 flex flex-col justify-center'>
+            <div className='w-full border-b-2 border-dark-200 flex justify-between py-10 max-lg:flex-col'>
+                <div className='w-1/2 flex flex-col justify-center max-lg:w-full'>
                     <h5 className='text-primary text-xl font-medium mb-4'>01. Step</h5>
                     <h2 className='text-5xl font-semibold text-white mb-6'>Create the order</h2>
                     <p className='text-textDarkPrimary font-light mb-6'>For example, let's Mixer Bitcoin to Ethereum. In the "You Send" field, choose "BTC" from the drop-down menu and type the amount of coins you would like to exchange. Then, in the "You Get" field, select "ETH". After that, the "You Get" field will automatically calculate the amount you will receive. Then click the "Exchange" button.</p>
                 </div>
-                <div className='w-[600px] flex flex-col justify-center items-center rounded-lg bg-[#64618742]'>
+                <div className='w-1/2 flex flex-col justify-center items-center rounded-lg bg-[#64618742] max-lg:w-full'>
                     <div className='w-full flex flex-col py-6 px-10 '>
                         <div className='w-full relative pb-6'>
                             <HowCurrentSelector type={typeIn} setType={(e: howCurrencyTypeInterface) => setTypeIn(e)} typeOut={typeOut} label="Send: " />
