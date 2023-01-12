@@ -28,3 +28,4 @@ const Button = (props: propsType) => {
 };
 
 export default Button;
+

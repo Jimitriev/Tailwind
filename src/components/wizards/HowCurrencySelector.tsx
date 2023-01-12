@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 import { howCurrencyTypes } from "../../config/constant";
 import { howCurrencyTypeInterface } from '../interface';
 
@@ -54,7 +53,7 @@ const HowCurrentSelector = (props: propsType) => {
                 </div>
             </div>
             <div className="w-full flex items-center justify-between">
-                <input id={'input_' + props.type?.name} className="text-[#FFE600] text-xl bg-transparent" value={props.amount ? props.amount : 0} onChange={(e: any) => changeAmountHandle(e.target.value)} />
+                <input id={'input_' + props.type?.name} className="text-[#FFE600] text-xl bg-transparent max-lg:w-1/2" value={props.amount ? props.amount : 0} onChange={(e: any) => changeAmountHandle(e.target.value)} />
                 <span className='text-textDarkPrimary font-light'>1 {props.type?.name} = 0 {props.typeOut?.name}</span>
             </div>
 
@@ -71,10 +70,10 @@ const HowCurrentSelector = (props: propsType) => {
                         <div className='w-full overflow-x-hidden overflow-y-auto max-h-[250px] scrollbar-w-[4px] scroll-smooth scrollbar-thin scrollbar-thumb-primary scrollbar-track-transparent scrollbar-corner-transparent scrollbar-thumb-rounded-full scrollbar-track-p-2'>
                             {
                                 howCurrencyTypes.filter((item: howCurrencyTypeInterface) => {
-                                    return !search.length || item.symbol.toLowerCase().indexOf(search.toLowerCase()) != -1 || item.name.toLowerCase().indexOf(search.toLowerCase()) != -1 || item.address.toLowerCase().indexOf(search.toLowerCase()) != -1
+                                    return !search.length || item.symbol.toLowerCase().indexOf(search.toLowerCase()) !== -1 || item.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || item.address.toLowerCase().indexOf(search.toLowerCase()) !== -1
                                 }).map((item: howCurrencyTypeInterface, index) => {
                                     return (
-                                        <div key={index + "_currency"} className={`w-full flex items-center justify-between cursor-pointer transition-colors hover:bg-primary px-3 py-3 ${howCurrencyTypes.length - 1 != index ? 'border-b border-[#3B3B77]' : ''}`}
+                                        <div key={index + "_currency"} className={`w-full flex items-center justify-between cursor-pointer transition-colors hover:bg-primary px-3 py-3 ${howCurrencyTypes.length - 1 !== index ? 'border-b border-[#3B3B77]' : ''}`}
                                             onClick={() => changeTypeHandle(item)}
                                         >
                                             <div className='flex items-center'>
@@ -88,7 +87,7 @@ const HowCurrentSelector = (props: propsType) => {
                                                     <span className='text-textDarkPrimary text-xs'>BNB Beacon Chain (BEP2)</span>
                                                 </div>
                                                 {
-                                                    item.symbol == props.type?.symbol ?
+                                                    item.symbol === props.type?.symbol ?
                                                         <div className='flex items-center justify-around ml-2'>
                                                             <svg className='text-[#11D96D]' width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                                 <path d="M16 1L6 11L1 6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
@@ -102,7 +101,7 @@ const HowCurrentSelector = (props: propsType) => {
                             }
                             {
                                 !howCurrencyTypes.filter((item: howCurrencyTypeInterface) => {
-                                    return !search.length || item.symbol.toLowerCase().indexOf(search.toLowerCase()) != -1 || item.name.toLowerCase().indexOf(search.toLowerCase()) != -1 || item.address.toLowerCase().indexOf(search.toLowerCase()) != -1
+                                    return !search.length || item.symbol.toLowerCase().indexOf(search.toLowerCase()) !== -1 || item.name.toLowerCase().indexOf(search.toLowerCase()) !== -1 || item.address.toLowerCase().indexOf(search.toLowerCase()) !== -1
                                 }).length && (
                                     <div className={`w-full flex items-center justify-between transition-colors px-3 py-3`}>
                                         <div className='flex items-center text-textDarkPrimary'>

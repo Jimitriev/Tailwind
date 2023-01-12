@@ -7,9 +7,16 @@ import USTC from "../assets/images/currency/USTC.png";
 import BTC from "../assets/images/currency/BTC.png";
 import XMR from "../assets/images/currency/XMR.png";
 import INCH from "../assets/images/currency/1INCH.png";
+import affordable from '../assets/images/platform/affordable.png';
+import fast from '../assets/images/platform/fast.png';
+import professionals from '../assets/images/platform/professionals.png';
+import svgviewer from '../assets/images/platform/svgviewer.png';
+import transparent from '../assets/images/platform/transparent.png';
+import user from '../assets/images/platform/user.png';
 
 
-import { currencyTypeInterface, howCurrencyTypeInterface } from "../components/interface";
+
+import { currencyTypeInterface, howCurrencyTypeInterface, platformTypeInterface } from "../components/interface";
 
 const currencyTypes:currencyTypeInterface[] = [{
     logo: BNB, 
@@ -82,3 +89,37 @@ const howCurrencyTypes:howCurrencyTypeInterface[] = [{
 export {
     howCurrencyTypes
 }
+
+const platformTypes: platformTypeInterface[]=[
+    {logo: svgviewer,
+    name:'Complete anonymity',
+    title:'Complete anonymity',
+    description:'We maintain the highest standards of confidentiality as the main idea of cryptocurrency'
+    },
+    {logo: transparent,
+    name:'Transparent',
+    title:'Transparent',
+    description:'We make sure the whole exchange process is straightforward, so users have the option to track a transaction’s status.'
+    },
+    {logo: affordable,
+    name:'Affordable',
+    title:'Affordable',
+    description:'Take advantage of the crypto platform with the most attractive and favorable service charges.'
+    },
+    {logo: fast,
+    name:'Fast',
+    title:'Fast',
+    description:'Our service maintains high transaction processing speed: it takes 5 to 30 minutes to process a transaction, depending on the volume of pending requests.'
+    },
+    {logo: user,
+    name:'User-frendly',
+    title:'User-friendly',
+    description:'The service was created by a group of experts from the blockchain industry; they were eager to deliver the most convenient and user-friendly platform to buy cryptocurrency.'
+    },
+    {logo: professionals,
+    name:'Professionals',
+    title:'Professionals',
+    description:'Our online support service is always here to assist you. Get answers to any questions 24/7.'
+    },
+]
+export{platformTypes}

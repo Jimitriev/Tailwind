@@ -10,3 +10,9 @@ export interface howCurrencyTypeInterface {
     symbol: string, 
     address: string,
 };
+export interface platformTypeInterface{
+    logo:any,
+    name: string,
+    title:string,
+    description:string
+}
