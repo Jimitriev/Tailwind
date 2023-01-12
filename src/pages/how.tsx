@@ -1,26 +1,22 @@
-import { FC } from "react";
-import Complete from "../components/sections/how/complete";
-import Createorder from "../components/sections/how/createorder";
-import Deposit from "../components/sections/how/deposit";
-import Featuredon from "../components/sections/how/featuredon";
-import Questions from "../components/sections/how/questions";
-import Title from "../components/sections/how/title";
-import Transations from "../components/sections/how/transactions";
-import Watingconv from "../components/sections/how/watingconv";
+import React, { FC } from "react";
+import Analyze from "../components/sections/how/analyze";
+import BestPlatform from "../components/sections/how/bestplatform";
+import Cryptocurrencies from "../components/sections/how/cryptocurrencies";
+import Private from "../components/sections/how/private";
+import Transaction from "../components/sections/how/transaction";
+import Trending from "../components/sections/how/trending";
 
-const HOW: FC = () => {
+const How: FC = () => {
     return (
         <div className="w-full flex flex-col items-center">
-            <Title />
-            <Createorder />
-            <Deposit />
-            <Watingconv />
-            <Complete />
-            <Questions />
-            <Transations />
-            <Featuredon />
+            <Cryptocurrencies />
+            <Private />
+            <Analyze />
+            <BestPlatform />
+            <Trending />
+            <Transaction />
         </div>
     )
 }
 
-export default HOW;
+export default How;

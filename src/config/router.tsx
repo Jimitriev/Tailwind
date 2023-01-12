@@ -5,9 +5,9 @@ import {
 import DefaultLayout from "../layouts/DefaultLayout";
 
 import Home from '../pages/index';
-import Mix from '../pages/mix';
+import Mix from '../pages/how';
 import CLI from '../pages/cli';
-import How from '../pages/how';
+import How from '../pages/mix';
 import Mixing from '../pages/mixing';
 
 const router = createBrowserRouter([
